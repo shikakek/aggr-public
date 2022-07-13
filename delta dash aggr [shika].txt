@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "createdAt": 1657707549728,
-  "updatedAt": 1657707574845,
+  "createdAt": 1657707655471,
+  "updatedAt": 1657707716674,
   "name": "delta dash div aggr [shika]",
   "id": "1rlv",
   "states": {
@@ -1349,7 +1349,7 @@
           "unsavedChanges": false,
           "series": [
             "liquidations",
-            "iaw8yuuy"
+            "gt56bsl6"
           ],
           "displayName": "Liquidations",
           "createdAt": 1657349169744,
@@ -1589,7 +1589,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 5.439452353283755,
+      "barSpacing": 5.369050803835597,
       "_id": "chart3"
     },
     "btc-perp-delta": {
@@ -2736,7 +2736,7 @@
           "series": [
             "price"
           ],
-          "unsavedChanges": true,
+          "unsavedChanges": false,
           "displayName": "Price",
           "navigationState": {
             "sections": [
@@ -2773,7 +2773,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "yos1uigs"
+            "nlqa2skf"
           ],
           "navigationState": {
             "sections": [
@@ -2809,7 +2809,7 @@
           "unsavedChanges": false,
           "series": [
             "liquidations",
-            "p3gnobwa"
+            "03k3h87z"
           ],
           "displayName": "Liquidations",
           "createdAt": 1657349169744,
@@ -3231,7 +3231,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 3.5963013039731293,
+      "barSpacing": 3.5958146075465587,
       "_id": "chart2"
     }
   }
