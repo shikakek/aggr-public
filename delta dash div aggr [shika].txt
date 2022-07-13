@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "createdAt": 1657706503428,
-  "updatedAt": 1657707212694,
+  "createdAt": 1657707417567,
+  "updatedAt": 1657707478858,
   "name": "delta dash div aggr [shika]",
   "id": "1rlv",
   "states": {
@@ -877,8 +877,8 @@
             "priceScaleId": "right",
             "priceFormat": {
               "auto": true,
-              "precision": 1,
-              "minMove": 0.1
+              "precision": 2,
+              "minMove": 0.01
             },
             "priceLineVisible": true,
             "lastValueVisible": true,
@@ -1349,7 +1349,7 @@
           "unsavedChanges": false,
           "series": [
             "liquidations",
-            "yeef336i"
+            "83867zx6"
           ],
           "displayName": "Liquidations",
           "createdAt": 1657349169744,
@@ -1589,7 +1589,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 5.369050803835597,
+      "barSpacing": 5.4053275351490395,
       "_id": "chart3"
     },
     "btc-perp-delta": {
@@ -1603,8 +1603,8 @@
             "priceScaleId": "right",
             "priceFormat": {
               "auto": true,
-              "precision": 1,
-              "minMove": 0.1
+              "precision": 2,
+              "minMove": 0.01
             },
             "priceLineVisible": true,
             "lastValueVisible": true,
@@ -2229,7 +2229,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 10.668340432720697,
+      "barSpacing": 10.809714283458133,
       "_id": "btc-perp-delta"
     },
     "trades": {
@@ -2715,8 +2715,8 @@
             "priceScaleId": "right",
             "priceFormat": {
               "auto": true,
-              "precision": 1,
-              "minMove": 0.1
+              "precision": 2,
+              "minMove": 0.01
             },
             "priceLineVisible": true,
             "lastValueVisible": true,
@@ -2736,7 +2736,7 @@
           "series": [
             "price"
           ],
-          "unsavedChanges": false,
+          "unsavedChanges": true,
           "displayName": "Price",
           "navigationState": {
             "sections": [
@@ -2773,7 +2773,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "r4tnik95"
+            "necguo1n"
           ],
           "navigationState": {
             "sections": [
@@ -2809,7 +2809,7 @@
           "unsavedChanges": false,
           "series": [
             "liquidations",
-            "pi8e36uj"
+            "5fkzj2ms"
           ],
           "displayName": "Liquidations",
           "createdAt": 1657349169744,
@@ -3126,8 +3126,8 @@
         },
         "agg-spot-cvd": {
           "scaleMargins": {
-            "top": 0.44,
-            "bottom": 0.42
+            "top": 0.43,
+            "bottom": 0.43
           },
           "indicators": [
             "Agg Spot Cvd"
@@ -3144,8 +3144,8 @@
         },
         "aggr-spot-delta": {
           "scaleMargins": {
-            "top": 0.44,
-            "bottom": 0.42
+            "top": 0.43,
+            "bottom": 0.43
           },
           "indicators": [
             "Aggr Spot Delta"
@@ -3153,7 +3153,7 @@
         },
         "agg-stablecoin-perps-cvd": {
           "scaleMargins": {
-            "top": 0.59,
+            "top": 0.58,
             "bottom": 0.28
           },
           "indicators": [
@@ -3178,7 +3178,7 @@
         "agg-coinmargin-perps-cvd": {
           "scaleMargins": {
             "top": 0.73,
-            "bottom": 0.14
+            "bottom": 0.13
           },
           "indicators": [
             "Agg CoinMargin Perps CVD"
@@ -3201,7 +3201,7 @@
         },
         "delta-stable-perp-aggr": {
           "scaleMargins": {
-            "top": 0.59,
+            "top": 0.58,
             "bottom": 0.28
           },
           "indicators": [
@@ -3211,7 +3211,7 @@
         "coin-margin-delta-perps": {
           "scaleMargins": {
             "top": 0.73,
-            "bottom": 0.14
+            "bottom": 0.13
           },
           "indicators": [
             "Aggregated CoinMargin PERPETUAL Delta"
@@ -3231,7 +3231,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 3.5869537249368926,
+      "barSpacing": 3.5963013039731293,
       "_id": "chart2"
     }
   }
