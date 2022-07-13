@@ -1,7 +1,7 @@
 {
   "version": 5,
   "createdAt": 1657664573316,
-  "updatedAt": 1657669153220,
+  "updatedAt": 1657671083720,
   "name": "delta dash div  [shika]",
   "id": "1rlg",
   "states": {
@@ -1274,11 +1274,11 @@
           "description": null,
           "unsavedChanges": false,
           "series": [
-            "bitmex-futures-cvd"
+            "bitmex-futures-cvd3"
           ],
           "displayName": "Bitmex Futures CVD",
           "createdAt": 1657346552491,
-          "updatedAt": 1657361443272,
+          "updatedAt": 1657671028059,
           "navigationState": {
             "sections": [
               "position",
@@ -1544,7 +1544,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 6.980340291259794,
+      "barSpacing": 12.472558451614628,
       "_id": "chart3"
     },
     "btc-perp-delta": {
@@ -1859,7 +1859,7 @@
           "description": null,
           "unsavedChanges": false,
           "series": [
-            "binance-spot-cvd"
+            "binance-spot-cvd2"
           ],
           "displayName": "Binance Spot CVD",
           "createdAt": 1657347988177,
@@ -1874,10 +1874,10 @@
             "optionsQuery": "",
             "fontSize": 1
           },
-          "updatedAt": 1657361498073
+          "updatedAt": 1657671046242
         },
         "ftx-spot-cvd": {
-          "script": "line(cum((FTX:BTC/USD.vbuy+FTX:BTC/USDT.vbuy)-(FTX:BTC/USD.vsell+FTX:BTC/USDT.vsell)), title=FTX SCVD)",
+          "script": "line(cum((FTX:BTC/USD.vbuy+FTX:BTC/USDT.vbuy)-(FTX:BTC/USD.vsell+FTX:BTC/USDT.vsell)), title=FTX SCVDkek)",
           "id": "ftx-spot-cvd",
           "name": "FTX Spot CVD",
           "options": {
@@ -1901,12 +1901,55 @@
           "description": null,
           "unsavedChanges": false,
           "series": [
-            "ftx-spot-cvd"
+            "ftx-spot-cvd2"
           ],
           "displayName": "FTX Spot CVD",
           "createdAt": 1657348153346,
-          "updatedAt": 1657369110501,
+          "updatedAt": 1657671057697,
           "uses": 1,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors",
+              "format",
+              "defaultOptions"
+            ],
+            "tab": "#script",
+            "optionsQuery": "",
+            "fontSize": 1
+          }
+        },
+        "coinbase-spot-cvd": {
+          "script": "line(cum((COINBASE:BTC-USD.vbuy + COINBASE:BTC-USDT.vbuy + COINBASE:BTC-USDC.vbuy)-(COINBASE:BTC-USD.vsell + COINBASE:BTC-USDT.vsell + COINBASE:BTC-USDC.vsell)), title=CB SCVD)",
+          "id": "coinbase-spot-cvd",
+          "name": "Coinbase Spot CVD",
+          "options": {
+            "priceScaleId": "cvd-btc-coinbase-spot",
+            "color": "rgb(255,255,255)",
+            "lineStyle": 0,
+            "lineWidth": 1,
+            "visible": true,
+            "scaleMargins": {
+              "top": 0.56,
+              "bottom": 0.28
+            },
+            "priceFormat": {
+              "type": "volume",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "lastValueVisible": true
+          },
+          "description": null,
+          "unsavedChanges": false,
+          "series": [
+            "coinbase-spot-cvd2"
+          ],
+          "displayName": "Coinbase Spot CVD",
+          "createdAt": 1657348468802,
+          "uses": 2,
+          "updatedAt": 1657671081344,
           "navigationState": {
             "sections": [
               "position",
@@ -1945,7 +1988,7 @@
           "description": null,
           "unsavedChanges": false,
           "series": [
-            "bitfinex-spot-cvd"
+            "bitfinex-spot-cvd2"
           ],
           "displayName": "Bitfinex Spot CVD",
           "createdAt": 1657348283123,
@@ -1962,49 +2005,6 @@
           },
           "updatedAt": 1657369126941,
           "uses": 1
-        },
-        "coinbase-spot-cvd": {
-          "script": "line(cum((COINBASE:BTC-USD.vbuy + COINBASE:BTC-USDT.vbuy + COINBASE:BTC-USDC.vbuy)-(COINBASE:BTC-USD.vsell + COINBASE:BTC-USDT.vsell + COINBASE:BTC-USDC.vsell)), title=CB SCVD)",
-          "id": "coinbase-spot-cvd",
-          "name": "Coinbase Spot CVD",
-          "options": {
-            "priceScaleId": "cvd-btc-coinbase-spot",
-            "color": "rgb(255,255,255)",
-            "lineStyle": 0,
-            "lineWidth": 1,
-            "visible": true,
-            "scaleMargins": {
-              "top": 0.56,
-              "bottom": 0.28
-            },
-            "priceFormat": {
-              "type": "volume",
-              "precision": 2,
-              "minMove": 0.01,
-              "auto": false
-            },
-            "lastValueVisible": true
-          },
-          "description": null,
-          "unsavedChanges": false,
-          "series": [
-            "coinbase-spot-cvd"
-          ],
-          "displayName": "Coinbase Spot CVD",
-          "createdAt": 1657348468802,
-          "uses": 2,
-          "updatedAt": 1657361613841,
-          "navigationState": {
-            "sections": [
-              "position",
-              "colors",
-              "format",
-              "defaultOptions"
-            ],
-            "tab": "#script",
-            "optionsQuery": "",
-            "fontSize": 1
-          }
         }
       },
       "priceScales": {
@@ -2184,7 +2184,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 9.640828428207454,
+      "barSpacing": 10.2485661956496,
       "_id": "btc-perp-delta"
     },
     "trades": {
