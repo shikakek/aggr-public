@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "createdAt": 1657707417567,
-  "updatedAt": 1657707478858,
+  "createdAt": 1657707549728,
+  "updatedAt": 1657707574845,
   "name": "delta dash div aggr [shika]",
   "id": "1rlv",
   "states": {
@@ -877,8 +877,8 @@
             "priceScaleId": "right",
             "priceFormat": {
               "auto": true,
-              "precision": 2,
-              "minMove": 0.01
+              "precision": 1,
+              "minMove": 0.1
             },
             "priceLineVisible": true,
             "lastValueVisible": true,
@@ -1349,7 +1349,7 @@
           "unsavedChanges": false,
           "series": [
             "liquidations",
-            "83867zx6"
+            "iaw8yuuy"
           ],
           "displayName": "Liquidations",
           "createdAt": 1657349169744,
@@ -1589,7 +1589,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 5.4053275351490395,
+      "barSpacing": 5.439452353283755,
       "_id": "chart3"
     },
     "btc-perp-delta": {
@@ -1603,8 +1603,8 @@
             "priceScaleId": "right",
             "priceFormat": {
               "auto": true,
-              "precision": 2,
-              "minMove": 0.01
+              "precision": 1,
+              "minMove": 0.1
             },
             "priceLineVisible": true,
             "lastValueVisible": true,
@@ -2229,7 +2229,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 10.809714283458133,
+      "barSpacing": 10.668340432720697,
       "_id": "btc-perp-delta"
     },
     "trades": {
@@ -2715,8 +2715,8 @@
             "priceScaleId": "right",
             "priceFormat": {
               "auto": true,
-              "precision": 2,
-              "minMove": 0.01
+              "precision": 1,
+              "minMove": 0.1
             },
             "priceLineVisible": true,
             "lastValueVisible": true,
@@ -2773,7 +2773,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "necguo1n"
+            "yos1uigs"
           ],
           "navigationState": {
             "sections": [
@@ -2809,7 +2809,7 @@
           "unsavedChanges": false,
           "series": [
             "liquidations",
-            "5fkzj2ms"
+            "p3gnobwa"
           ],
           "displayName": "Liquidations",
           "createdAt": 1657349169744,
