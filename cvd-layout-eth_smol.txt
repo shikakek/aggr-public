@@ -1,0 +1,134 @@
+{
+  "version": 5,
+  "createdAt": 1659375324115,
+  "updatedAt": 1659375614151,
+  "name": "cvd layout eth",
+  "id": "cvd-layout-eth",
+  "states": {
+    "panes": {
+      "_id": "panes",
+      "locked": false,
+      "panes": {},
+      "layout": []
+    },
+    "settings": {
+      "_id": "settings",
+      "preferQuoteCurrencySize": true,
+      "aggregationLength": 1,
+      "disableAnimations": false,
+      "calculateSlippage": null,
+      "autoHideHeaders": true,
+      "theme": "dark",
+      "backgroundColor": "rgb(23,27,41)",
+      "textColor": "",
+      "timezoneOffset": 0,
+      "useAudio": false,
+      "audioVolume": 1,
+      "audioFilters": {
+        "PingPongDelay": true,
+        "Compressor": false,
+        "Delay": false,
+        "HighPassFilter": true,
+        "LowPassFilter": false
+      },
+      "settings": [
+        "other",
+        "chart",
+        "stats",
+        "counters",
+        "audio",
+        "workspaces"
+      ],
+      "searchTypes": {
+        "historical": true,
+        "spots": true,
+        "perpetuals": false,
+        "futures": false,
+        "normalize": false,
+        "mergeUsdt": true
+      },
+      "searchQuotes": {},
+      "previousSearchSelections": [
+        {
+          "label": "ETHUSD",
+          "markets": [
+            "BINANCE:ethusdt",
+            "BITFINEX:ETHUSD",
+            "BITFINEX:ETHUST",
+            "COINBASE:ETH-USD",
+            "COINBASE:ETH-USDT",
+            "FTX:ETH/USD",
+            "FTX:ETH/USDT"
+          ],
+          "count": 7
+        },
+        {
+          "label": "ETHUSD",
+          "markets": [
+            "BINANCE_FUTURES:ethusd_perp",
+            "BINANCE_FUTURES:ethusdt",
+            "BITFINEX:ETHF0:USTF0",
+            "BITMEX:ETHUSD",
+            "BITMEX:ETHUSDT",
+            "BYBIT:ETHUSD",
+            "BYBIT:ETHUSDT",
+            "DERIBIT:ETH_USDC-PERPETUAL",
+            "DERIBIT:ETH-PERPETUAL",
+            "FTX:ETH-PERP"
+          ],
+          "count": 10
+        },
+        {
+          "label": "ETHBUSD+ETHUSD",
+          "markets": [
+            "BINANCE_FUTURES:ethbusd",
+            "BINANCE_FUTURES:ethusd_perp",
+            "BINANCE_FUTURES:ethusdt",
+            "BITFINEX:ETHF0:USTF0",
+            "BITMEX:ETHUSD",
+            "BITMEX:ETHUSDT",
+            "BYBIT:ETHUSD",
+            "BYBIT:ETHUSDT",
+            "DERIBIT:ETH_USDC-PERPETUAL",
+            "DERIBIT:ETH-PERPETUAL",
+            "FTX:ETH-PERP"
+          ],
+          "count": 11
+        }
+      ],
+      "searchExchanges": {
+        "BINANCE": true,
+        "BINANCE_FUTURES": true,
+        "BINANCE_US": true,
+        "BITFINEX": true,
+        "BITMEX": true,
+        "BITSTAMP": true,
+        "BYBIT": true,
+        "COINBASE": true,
+        "DERIBIT": true,
+        "DYDX": true,
+        "FTX": true,
+        "HITETH": true,
+        "HUOBI": true,
+        "KRAKEN": true,
+        "OKEX": true,
+        "PHEMEX": true,
+        "POLONIEX": true
+      },
+      "favoriteTimeframes": {
+        "60": "1m",
+        "300": "5m",
+        "900": "15m",
+        "3600": "1h",
+        "14400": "4h"
+      },
+      "normalizeWatermarks": true,
+      "alerts": true,
+      "alertsColor": "red",
+      "alertsLineStyle": 2,
+      "alertsLineWidth": 2,
+      "alertsClick": false,
+      "alertSound": null
+    }
+  }
+}
