@@ -1,15 +1,438 @@
 {
   "version": 5,
-  "createdAt": 1659375324115,
-  "updatedAt": 1659375614151,
+  "createdAt": 1659400532096,
+  "updatedAt": 1659400771388,
   "name": "cvd layout eth",
-  "id": "cvd-layout-eth",
+  "id": "eth-delta-dash-div-aggr-shika-copy-1",
   "states": {
     "panes": {
       "_id": "panes",
       "locked": false,
-      "panes": {},
-      "layout": []
+      "panes": {
+        "chart2": {
+          "id": "chart2",
+          "name": "Aggr",
+          "type": "chart",
+          "markets": [
+            "BINANCE_FUTURES:ethusd_perp",
+            "BITFINEX:ETHUSD",
+            "BITMEX:ETHUSD",
+            "BYBIT:ETHUSD",
+            "COINBASE:ETH-USD",
+            "DERIBIT:ETH-PERPETUAL",
+            "FTX:ETH-PERP",
+            "FTX:ETH/USD",
+            "BINANCE:ethusdt",
+            "BINANCE_FUTURES:ethusdt",
+            "BITFINEX:ETHUST",
+            "BITFINEX:ETHF0:USTF0",
+            "BITMEX:ETHUSDT",
+            "BYBIT:ETHUSDT",
+            "COINBASE:ETH-USDT",
+            "FTX:ETH/USDT",
+            "DERIBIT:ETH_USDC-PERPETUAL"
+          ]
+        },
+        "aggr": {
+          "id": "aggr",
+          "name": "Aggr",
+          "type": "chart",
+          "settings": {
+            "indicatorsErrors": {},
+            "indicators": {
+              "price": {
+                "script": "plotcandlestick(options.useHeikinAshi ? avg_heikinashi(bar) : options.useGaps ? avg_ohlc_with_gaps(bar) : avg_ohlc(bar))",
+                "enabled": true,
+                "name": "Price",
+                "options": {
+                  "priceScaleId": "right",
+                  "priceFormat": {
+                    "auto": true,
+                    "precision": 1,
+                    "minMove": 0.1
+                  },
+                  "priceLineVisible": true,
+                  "lastValueVisible": true,
+                  "borderVisible": true,
+                  "upColor": "rgb(25,118,210)",
+                  "downColor": "rgb(255,255,255)",
+                  "borderUpColor": "rgb(25,118,210)",
+                  "borderDownColor": "rgb(255,255,255)",
+                  "wickUpColor": "rgb(25,118,210)",
+                  "wickDownColor": "rgb(255,255,255)",
+                  "useGaps": false,
+                  "useHeikinAshi": false
+                },
+                "id": "price",
+                "createdAt": 1657340969806,
+                "updatedAt": 1657341877019,
+                "series": [
+                  "price"
+                ],
+                "unsavedChanges": true,
+                "displayName": "Price",
+                "navigationState": {
+                  "sections": [
+                    "position",
+                    "colors"
+                  ],
+                  "tab": 0,
+                  "optionsQuery": "",
+                  "fontSize": 1
+                }
+              },
+              "liquidations": {
+                "script": "plothistogram(lbuy, color=options.upColor)\nplothistogram(-lsell, color=options.downColor)",
+                "id": "liquidations",
+                "name": "Liquidations",
+                "options": {
+                  "priceScaleId": "liquidations",
+                  "priceFormat": {
+                    "type": "price",
+                    "precision": 2,
+                    "minMove": 0.01,
+                    "auto": false
+                  },
+                  "upColor": "rgb(255,76,243)",
+                  "downColor": "rgb(255,183,77)",
+                  "scaleMargins": {
+                    "top": 0.82,
+                    "bottom": 0.1
+                  },
+                  "lastValueVisible": false
+                },
+                "description": "Liquidations by side",
+                "unsavedChanges": false,
+                "series": [
+                  "liquidations",
+                  "klbciyey"
+                ],
+                "displayName": "Liquidations",
+                "createdAt": 1657349169744,
+                "navigationState": {
+                  "sections": [
+                    "position",
+                    "colors",
+                    "format",
+                    "defaultOptions"
+                  ],
+                  "tab": "#script",
+                  "optionsQuery": "",
+                  "fontSize": 1
+                },
+                "updatedAt": 1657366041872,
+                "uses": 1
+              },
+              "cvd-eth-perp copy 1": {
+                "script": "line(cum((BINANCE_FUTURES:ethusdt.vbuy+BINANCE_FUTURES:ethusd_perp.vbuy+BITFINEX:ETHF0:USTF0.vbuy+BITMEX:ETHUSD.vbuy+BYBIT:ETHUSD.vbuy+BYBIT:ETHUSDT.vbuy+DERIBIT:ETH-PERPETUAL.vbuy+FTX:ETH-PERP.vbuy+HUOBI:ETH-USD.vbuy+KRAKEN:PI_ETHUSD.vbuy+OKEX:ETH-USDT-SWAP.vbuy+OKEX:ETH-USD-SWAP.vbuy)- (BINANCE_FUTURES:ethusdt.vsell+BINANCE_FUTURES:ethusd_perp.vsell+BITFINEX:ETHF0:USTF0.vsell+BITMEX:ETHUSD.vsell+BYBIT:ETHUSD.vsell+BYBIT:ETHUSDT.vsell+DERIBIT:ETH-PERPETUAL.vsell+FTX:ETH-PERP.vsell+HUOBI:ETH-USD.vsell+KRAKEN:PI_ETHUSD.vsell+OKEX:ETH-USDT-SWAP.vsell+OKEX:ETH-USD-SWAP.vsell)), title=PERP CVD)",
+                "id": "cvd-eth-perp copy 1",
+                "name": "CVD ETH Perp",
+                "options": {
+                  "priceScaleId": "cvd-ETH-perp",
+                  "color": "rgb(244,143,177)",
+                  "lineStyle": 0,
+                  "lineWidth": 1,
+                  "scaleMargins": {
+                    "top": 0.06,
+                    "bottom": 0.56
+                  },
+                  "priceFormat": {
+                    "type": "volume",
+                    "precision": 2,
+                    "minMove": 0.01,
+                    "auto": false
+                  },
+                  "lastValueVisible": true
+                },
+                "description": null,
+                "unsavedChanges": false,
+                "series": [
+                  "cvd-eth-perp copy 1"
+                ],
+                "displayName": "CVD ETH Perp",
+                "createdAt": 1659400672301,
+                "navigationState": {
+                  "sections": [
+                    "position",
+                    "colors"
+                  ],
+                  "tab": 0,
+                  "optionsQuery": "",
+                  "fontSize": 1
+                }
+              },
+              "cvd-eth-spot copy 2": {
+                "script": "line(cum((BINANCE:ethusdt.vbuy+BINANCE:ethusdc.vbuy+BITFINEX:ETHUSD.vbuy+BITSTAMP:ETHusd.vbuy+BITSTAMP:ETHusdt.vbuy+BITSTAMP:ETHusdc.vbuy+FTX:ETH/USD.vbuy+FTX:ETH/USDT.vbuy+HUOBI:ETHusdt.vbuy+HUOBI:ETHusdc.vbuy+KRAKEN:ETH/USDC.vbuy+KRAKEN:ETH/USDT.vbuy+KRAKEN:ETH/USD.vbuy+OKEX:ETH-USDT.vbuy+OKEX:ETH-USDC.vbuy+POLONIEX:USDT_ETH.vbuy+POLONIEX:USDC_ETH.vbuy)-(BINANCE:ethusdt.vsell+BINANCE:ethusdc.vsell+BITFINEX:ETHUSD.vsell+BITSTAMP:ETHusd.vsell+BITSTAMP:ETHusdt.vsell+BITSTAMP:ETHusdc.vsell+FTX:ETH/USD.vsell+FTX:ETH/USDT.vsell+HUOBI:ETHusdt.vsell+HUOBI:ETHusdc.vsell+KRAKEN:ETH/USDC.vsell+KRAKEN:ETH/USDT.vsell+KRAKEN:ETH/USD.vsell+OKEX:ETH-USDT.vsell+OKEX:ETH-USDC.vsell+POLONIEX:USDT_ETH.vsell+POLONIEX:USDC_ETH.vsell)), title=SPOT wo cb)",
+                "id": "cvd-eth-spot copy 2",
+                "name": "CVD ETH Spot",
+                "options": {
+                  "priceScaleId": "cvd-ETH-spot",
+                  "color": "rgb(0,255,255)",
+                  "lineStyle": 0,
+                  "lineWidth": 1,
+                  "visible": true,
+                  "scaleMargins": {
+                    "top": 0.06,
+                    "bottom": 0.56
+                  },
+                  "priceFormat": {
+                    "type": "volume",
+                    "precision": 2,
+                    "minMove": 0.01,
+                    "auto": false
+                  },
+                  "lastValueVisible": true
+                },
+                "description": null,
+                "unsavedChanges": false,
+                "series": [
+                  "cvd-eth-spot copy 2"
+                ],
+                "displayName": "CVD ETH Spot",
+                "createdAt": 1659400681661,
+                "navigationState": {
+                  "sections": [
+                    "position",
+                    "colors"
+                  ],
+                  "tab": 0,
+                  "optionsQuery": "",
+                  "fontSize": 1
+                }
+              }
+            },
+            "priceScales": {
+              "right": {
+                "scaleMargins": {
+                  "top": 0.19,
+                  "bottom": 0.06
+                },
+                "indicators": [
+                  "Price"
+                ]
+              },
+              "cvd": {
+                "scaleMargins": {
+                  "top": 0.84,
+                  "bottom": 0
+                }
+              },
+              "volume": {
+                "scaleMargins": {
+                  "top": 0.87,
+                  "bottom": 0
+                },
+                "indicators": [
+                  "Volume"
+                ]
+              },
+              "cvd-ETH-binance": {
+                "scaleMargins": {
+                  "top": 0.32,
+                  "bottom": 0.41
+                }
+              },
+              "delta-perps": {
+                "scaleMargins": {
+                  "top": 0.47,
+                  "bottom": 0.4
+                },
+                "indicators": [
+                  "Delta Perps"
+                ]
+              },
+              "aggr-delta-perps": {
+                "scaleMargins": {
+                  "top": 0.43,
+                  "bottom": 0.46
+                },
+                "indicators": [
+                  "Aggr Delta perps"
+                ]
+              },
+              "liquidations": {
+                "scaleMargins": {
+                  "top": 0.05,
+                  "bottom": 0.83
+                },
+                "indicators": [
+                  "Liquidations"
+                ]
+              },
+              "agg-spot-cvd": {
+                "scaleMargins": {
+                  "top": 0.43,
+                  "bottom": 0.43
+                },
+                "indicators": [
+                  "Agg Spot Cvd"
+                ]
+              },
+              "agg-stablecoin-perps-delta": {
+                "scaleMargins": {
+                  "top": 0.55,
+                  "bottom": 0.34
+                },
+                "indicators": [
+                  "Agg Stablecoin Perps Delta"
+                ]
+              },
+              "aggr-spot-delta": {
+                "scaleMargins": {
+                  "top": 0.43,
+                  "bottom": 0.43
+                },
+                "indicators": [
+                  "Aggr Spot Delta"
+                ]
+              },
+              "agg-stablecoin-perps-cvd": {
+                "scaleMargins": {
+                  "top": 0.58,
+                  "bottom": 0.28
+                },
+                "indicators": [
+                  "Agg StableCoin Perps CVD"
+                ]
+              },
+              "agg-coinmargin-perps-delta": {
+                "scaleMargins": {
+                  "top": 0.7,
+                  "bottom": 0.11
+                },
+                "indicators": [
+                  "Agg CoinMargin Perps Delta"
+                ]
+              },
+              "agg-perp-cvd": {
+                "scaleMargins": {
+                  "top": 0.1,
+                  "bottom": 0.2
+                }
+              },
+              "agg-coinmargin-perps-cvd": {
+                "scaleMargins": {
+                  "top": 0.73,
+                  "bottom": 0.13
+                },
+                "indicators": [
+                  "Agg CoinMargin Perps CVD"
+                ]
+              },
+              "agg-spot-delta": {
+                "scaleMargins": {
+                  "top": 0.1,
+                  "bottom": 0.2
+                }
+              },
+              "delta-spot": {
+                "scaleMargins": {
+                  "top": 0.44,
+                  "bottom": 0.42
+                },
+                "indicators": [
+                  "Aggr Spot Delta"
+                ]
+              },
+              "delta-stable-perp-aggr": {
+                "scaleMargins": {
+                  "top": 0.58,
+                  "bottom": 0.28
+                },
+                "indicators": [
+                  "Aggr Stablecoin PERPETUAL Delta"
+                ]
+              },
+              "coin-margin-delta-perps": {
+                "scaleMargins": {
+                  "top": 0.73,
+                  "bottom": 0.13
+                },
+                "indicators": [
+                  "Aggregated CoinMargin PERPETUAL Delta"
+                ]
+              },
+              "cvd-btc-spot": {
+                "scaleMargins": {
+                  "top": 0.29,
+                  "bottom": 0.37
+                }
+              },
+              "cvd-ETH-perp": {
+                "scaleMargins": {
+                  "top": 0.19,
+                  "bottom": 0.06
+                },
+                "indicators": [
+                  "CVD ETH Perp"
+                ]
+              },
+              "cvd-ETH-spot": {
+                "scaleMargins": {
+                  "top": 0.19,
+                  "bottom": 0.06
+                },
+                "indicators": [
+                  "CVD ETH Spot"
+                ]
+              }
+            },
+            "layouting": false,
+            "timeframe": "900",
+            "refreshRate": 1000,
+            "showLegend": true,
+            "fillGapsWithEmpty": true,
+            "forceNormalizePrice": false,
+            "showHorizontalGridlines": false,
+            "horizontalGridlinesColor": "rgba(255,255,255,.1)",
+            "showVerticalGridlines": false,
+            "verticalGridlinesColor": "rgba(255,255,255,.1)",
+            "showWatermark": true,
+            "watermarkColor": "rgba(255,255,255,.1)",
+            "hiddenMarkets": {},
+            "barSpacing": 12.242360471510507
+          },
+          "markets": [
+            "BINANCE_FUTURES:ethusd_perp",
+            "BITFINEX:ETHUSD",
+            "BITMEX:ETHUSD",
+            "BYBIT:ETHUSD",
+            "COINBASE:ETH-USD",
+            "DERIBIT:ETH-PERPETUAL",
+            "FTX:ETH-PERP",
+            "FTX:ETH/USD",
+            "BINANCE:ethusdt",
+            "BINANCE_FUTURES:ethusdt",
+            "BITFINEX:ETHUST",
+            "BITFINEX:ETHF0:USTF0",
+            "BITMEX:ETHUSDT",
+            "BYBIT:ETHUSDT",
+            "COINBASE:ETH-USDT",
+            "FTX:ETH/USDT",
+            "DERIBIT:ETH_USDC-PERPETUAL"
+          ]
+        }
+      },
+      "layout": [
+        {
+          "i": "chart2",
+          "type": "chart",
+          "y": 0,
+          "x": 0,
+          "w": 24,
+          "h": 12,
+          "moved": false
+        },
+        {
+          "i": "aggr",
+          "type": "chart",
+          "w": 24,
+          "h": 12,
+          "y": 12,
+          "x": 0,
+          "moved": false
+        }
+      ]
     },
     "settings": {
       "_id": "settings",
@@ -129,6 +552,718 @@
       "alertsLineWidth": 2,
       "alertsClick": false,
       "alertSound": null
+    },
+    "chart2": {
+      "indicatorsErrors": {},
+      "indicators": {
+        "price": {
+          "script": "plotcandlestick(options.useHeikinAshi ? avg_heikinashi(bar) : options.useGaps ? avg_ohlc_with_gaps(bar) : avg_ohlc(bar))",
+          "enabled": true,
+          "name": "Price",
+          "options": {
+            "priceScaleId": "right",
+            "priceFormat": {
+              "auto": true,
+              "precision": 2,
+              "minMove": 0.01
+            },
+            "priceLineVisible": true,
+            "lastValueVisible": true,
+            "borderVisible": true,
+            "upColor": "rgb(25,118,210)",
+            "downColor": "rgb(255,255,255)",
+            "borderUpColor": "rgb(25,118,210)",
+            "borderDownColor": "rgb(255,255,255)",
+            "wickUpColor": "rgb(25,118,210)",
+            "wickDownColor": "rgb(255,255,255)",
+            "useGaps": false,
+            "useHeikinAshi": false
+          },
+          "id": "price",
+          "createdAt": 1657340969806,
+          "updatedAt": 1657341877019,
+          "series": [
+            "price"
+          ],
+          "unsavedChanges": true,
+          "displayName": "Price",
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors"
+            ],
+            "tab": 0,
+            "optionsQuery": "",
+            "fontSize": 1
+          }
+        },
+        "liquidations": {
+          "script": "plothistogram(lbuy, color=options.upColor)\nplothistogram(-lsell, color=options.downColor)",
+          "id": "liquidations",
+          "name": "Liquidations",
+          "options": {
+            "priceScaleId": "liquidations",
+            "priceFormat": {
+              "type": "price",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "upColor": "rgb(255,76,243)",
+            "downColor": "rgb(255,183,77)",
+            "scaleMargins": {
+              "top": 0.82,
+              "bottom": 0.1
+            },
+            "lastValueVisible": false
+          },
+          "description": "Liquidations by side",
+          "unsavedChanges": false,
+          "series": [
+            "liquidations",
+            "4j17jj8a"
+          ],
+          "displayName": "Liquidations",
+          "createdAt": 1657349169744,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors",
+              "format",
+              "defaultOptions"
+            ],
+            "tab": "#script",
+            "optionsQuery": "",
+            "fontSize": 1
+          },
+          "updatedAt": 1657366041872,
+          "uses": 1
+        },
+        "cvd-eth-perp copy 1": {
+          "script": "line(cum((BINANCE_FUTURES:ethusdt.vbuy+BINANCE_FUTURES:ethusd_perp.vbuy+BITFINEX:ETHF0:USTF0.vbuy+BITMEX:ETHUSD.vbuy+BYBIT:ETHUSD.vbuy+BYBIT:ETHUSDT.vbuy+DERIBIT:ETH-PERPETUAL.vbuy+FTX:ETH-PERP.vbuy+HUOBI:ETH-USD.vbuy+KRAKEN:PI_ETHUSD.vbuy+OKEX:ETH-USDT-SWAP.vbuy+OKEX:ETH-USD-SWAP.vbuy)- (BINANCE_FUTURES:ethusdt.vsell+BINANCE_FUTURES:ethusd_perp.vsell+BITFINEX:ETHF0:USTF0.vsell+BITMEX:ETHUSD.vsell+BYBIT:ETHUSD.vsell+BYBIT:ETHUSDT.vsell+DERIBIT:ETH-PERPETUAL.vsell+FTX:ETH-PERP.vsell+HUOBI:ETH-USD.vsell+KRAKEN:PI_ETHUSD.vsell+OKEX:ETH-USDT-SWAP.vsell+OKEX:ETH-USD-SWAP.vsell)), title=PERP CVD)",
+          "id": "cvd-eth-perp copy 1",
+          "name": "CVD ETH Perp",
+          "options": {
+            "priceScaleId": "cvd-ETH-perp",
+            "color": "rgb(244,143,177)",
+            "lineStyle": 0,
+            "lineWidth": 1,
+            "scaleMargins": {
+              "top": 0.06,
+              "bottom": 0.56
+            },
+            "priceFormat": {
+              "type": "volume",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "lastValueVisible": true
+          },
+          "description": null,
+          "unsavedChanges": false,
+          "series": [
+            "cvd-eth-perp copy 1"
+          ],
+          "displayName": "CVD ETH Perp",
+          "createdAt": 1659400672301,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors"
+            ],
+            "tab": 0,
+            "optionsQuery": "",
+            "fontSize": 1
+          }
+        },
+        "cvd-eth-spot copy 2": {
+          "script": "line(cum((BINANCE:ethusdt.vbuy+BINANCE:ethusdc.vbuy+BITFINEX:ETHUSD.vbuy+BITSTAMP:ETHusd.vbuy+BITSTAMP:ETHusdt.vbuy+BITSTAMP:ETHusdc.vbuy+FTX:ETH/USD.vbuy+FTX:ETH/USDT.vbuy+HUOBI:ETHusdt.vbuy+HUOBI:ETHusdc.vbuy+KRAKEN:ETH/USDC.vbuy+KRAKEN:ETH/USDT.vbuy+KRAKEN:ETH/USD.vbuy+OKEX:ETH-USDT.vbuy+OKEX:ETH-USDC.vbuy+POLONIEX:USDT_ETH.vbuy+POLONIEX:USDC_ETH.vbuy)-(BINANCE:ethusdt.vsell+BINANCE:ethusdc.vsell+BITFINEX:ETHUSD.vsell+BITSTAMP:ETHusd.vsell+BITSTAMP:ETHusdt.vsell+BITSTAMP:ETHusdc.vsell+FTX:ETH/USD.vsell+FTX:ETH/USDT.vsell+HUOBI:ETHusdt.vsell+HUOBI:ETHusdc.vsell+KRAKEN:ETH/USDC.vsell+KRAKEN:ETH/USDT.vsell+KRAKEN:ETH/USD.vsell+OKEX:ETH-USDT.vsell+OKEX:ETH-USDC.vsell+POLONIEX:USDT_ETH.vsell+POLONIEX:USDC_ETH.vsell)), title=SPOT wo cb)",
+          "id": "cvd-eth-spot copy 2",
+          "name": "CVD ETH Spot",
+          "options": {
+            "priceScaleId": "cvd-ETH-spot",
+            "color": "rgb(0,255,255)",
+            "lineStyle": 0,
+            "lineWidth": 1,
+            "visible": true,
+            "scaleMargins": {
+              "top": 0.06,
+              "bottom": 0.56
+            },
+            "priceFormat": {
+              "type": "volume",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "lastValueVisible": true
+          },
+          "description": null,
+          "unsavedChanges": false,
+          "series": [
+            "cvd-eth-spot copy 2"
+          ],
+          "displayName": "CVD ETH Spot",
+          "createdAt": 1659400681661,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors"
+            ],
+            "tab": 0,
+            "optionsQuery": "",
+            "fontSize": 1
+          }
+        }
+      },
+      "priceScales": {
+        "right": {
+          "scaleMargins": {
+            "top": 0.19,
+            "bottom": 0.06
+          },
+          "indicators": [
+            "Price"
+          ]
+        },
+        "cvd": {
+          "scaleMargins": {
+            "top": 0.84,
+            "bottom": 0
+          }
+        },
+        "volume": {
+          "scaleMargins": {
+            "top": 0.87,
+            "bottom": 0
+          },
+          "indicators": [
+            "Volume"
+          ]
+        },
+        "cvd-ETH-binance": {
+          "scaleMargins": {
+            "top": 0.32,
+            "bottom": 0.41
+          }
+        },
+        "delta-perps": {
+          "scaleMargins": {
+            "top": 0.47,
+            "bottom": 0.4
+          },
+          "indicators": [
+            "Delta Perps"
+          ]
+        },
+        "aggr-delta-perps": {
+          "scaleMargins": {
+            "top": 0.43,
+            "bottom": 0.46
+          },
+          "indicators": [
+            "Aggr Delta perps"
+          ]
+        },
+        "liquidations": {
+          "scaleMargins": {
+            "top": 0.05,
+            "bottom": 0.83
+          },
+          "indicators": [
+            "Liquidations"
+          ]
+        },
+        "agg-spot-cvd": {
+          "scaleMargins": {
+            "top": 0.43,
+            "bottom": 0.43
+          },
+          "indicators": [
+            "Agg Spot Cvd"
+          ]
+        },
+        "agg-stablecoin-perps-delta": {
+          "scaleMargins": {
+            "top": 0.55,
+            "bottom": 0.34
+          },
+          "indicators": [
+            "Agg Stablecoin Perps Delta"
+          ]
+        },
+        "aggr-spot-delta": {
+          "scaleMargins": {
+            "top": 0.43,
+            "bottom": 0.43
+          },
+          "indicators": [
+            "Aggr Spot Delta"
+          ]
+        },
+        "agg-stablecoin-perps-cvd": {
+          "scaleMargins": {
+            "top": 0.58,
+            "bottom": 0.28
+          },
+          "indicators": [
+            "Agg StableCoin Perps CVD"
+          ]
+        },
+        "agg-coinmargin-perps-delta": {
+          "scaleMargins": {
+            "top": 0.7,
+            "bottom": 0.11
+          },
+          "indicators": [
+            "Agg CoinMargin Perps Delta"
+          ]
+        },
+        "agg-perp-cvd": {
+          "scaleMargins": {
+            "top": 0.1,
+            "bottom": 0.2
+          }
+        },
+        "agg-coinmargin-perps-cvd": {
+          "scaleMargins": {
+            "top": 0.73,
+            "bottom": 0.13
+          },
+          "indicators": [
+            "Agg CoinMargin Perps CVD"
+          ]
+        },
+        "agg-spot-delta": {
+          "scaleMargins": {
+            "top": 0.1,
+            "bottom": 0.2
+          }
+        },
+        "delta-spot": {
+          "scaleMargins": {
+            "top": 0.44,
+            "bottom": 0.42
+          },
+          "indicators": [
+            "Aggr Spot Delta"
+          ]
+        },
+        "delta-stable-perp-aggr": {
+          "scaleMargins": {
+            "top": 0.58,
+            "bottom": 0.28
+          },
+          "indicators": [
+            "Aggr Stablecoin PERPETUAL Delta"
+          ]
+        },
+        "coin-margin-delta-perps": {
+          "scaleMargins": {
+            "top": 0.73,
+            "bottom": 0.13
+          },
+          "indicators": [
+            "Aggregated CoinMargin PERPETUAL Delta"
+          ]
+        },
+        "cvd-btc-spot": {
+          "scaleMargins": {
+            "top": 0.29,
+            "bottom": 0.37
+          }
+        },
+        "cvd-ETH-perp": {
+          "scaleMargins": {
+            "top": 0.19,
+            "bottom": 0.06
+          },
+          "indicators": [
+            "CVD ETH Perp"
+          ]
+        },
+        "cvd-ETH-spot": {
+          "scaleMargins": {
+            "top": 0.19,
+            "bottom": 0.06
+          },
+          "indicators": [
+            "CVD ETH Spot"
+          ]
+        }
+      },
+      "layouting": false,
+      "timeframe": "60",
+      "refreshRate": 1000,
+      "showLegend": true,
+      "fillGapsWithEmpty": true,
+      "forceNormalizePrice": false,
+      "showHorizontalGridlines": false,
+      "horizontalGridlinesColor": "rgba(255,255,255,.1)",
+      "showVerticalGridlines": false,
+      "verticalGridlinesColor": "rgba(255,255,255,.1)",
+      "showWatermark": true,
+      "watermarkColor": "rgba(255,255,255,.1)",
+      "hiddenMarkets": {},
+      "barSpacing": 30.19761323902424,
+      "_id": "chart2"
+    },
+    "aggr": {
+      "indicatorsErrors": {},
+      "indicators": {
+        "price": {
+          "script": "plotcandlestick(options.useHeikinAshi ? avg_heikinashi(bar) : options.useGaps ? avg_ohlc_with_gaps(bar) : avg_ohlc(bar))",
+          "enabled": true,
+          "name": "Price",
+          "options": {
+            "priceScaleId": "right",
+            "priceFormat": {
+              "auto": true,
+              "precision": 2,
+              "minMove": 0.01
+            },
+            "priceLineVisible": true,
+            "lastValueVisible": true,
+            "borderVisible": true,
+            "upColor": "rgb(25,118,210)",
+            "downColor": "rgb(255,255,255)",
+            "borderUpColor": "rgb(25,118,210)",
+            "borderDownColor": "rgb(255,255,255)",
+            "wickUpColor": "rgb(25,118,210)",
+            "wickDownColor": "rgb(255,255,255)",
+            "useGaps": false,
+            "useHeikinAshi": false
+          },
+          "id": "price",
+          "createdAt": 1657340969806,
+          "updatedAt": 1657341877019,
+          "series": [
+            "price"
+          ],
+          "unsavedChanges": true,
+          "displayName": "Price",
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors"
+            ],
+            "tab": 0,
+            "optionsQuery": "",
+            "fontSize": 1
+          }
+        },
+        "liquidations": {
+          "script": "plothistogram(lbuy, color=options.upColor)\nplothistogram(-lsell, color=options.downColor)",
+          "id": "liquidations",
+          "name": "Liquidations",
+          "options": {
+            "priceScaleId": "liquidations",
+            "priceFormat": {
+              "type": "price",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "upColor": "rgb(255,76,243)",
+            "downColor": "rgb(255,183,77)",
+            "scaleMargins": {
+              "top": 0.82,
+              "bottom": 0.1
+            },
+            "lastValueVisible": false
+          },
+          "description": "Liquidations by side",
+          "unsavedChanges": false,
+          "series": [
+            "liquidations",
+            "kafnkywb"
+          ],
+          "displayName": "Liquidations",
+          "createdAt": 1657349169744,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors",
+              "format",
+              "defaultOptions"
+            ],
+            "tab": "#script",
+            "optionsQuery": "",
+            "fontSize": 1
+          },
+          "updatedAt": 1657366041872,
+          "uses": 1
+        },
+        "cvd-eth-perp copy 1": {
+          "script": "line(cum((BINANCE_FUTURES:ethusdt.vbuy+BINANCE_FUTURES:ethusd_perp.vbuy+BITFINEX:ETHF0:USTF0.vbuy+BITMEX:ETHUSD.vbuy+BYBIT:ETHUSD.vbuy+BYBIT:ETHUSDT.vbuy+DERIBIT:ETH-PERPETUAL.vbuy+FTX:ETH-PERP.vbuy+HUOBI:ETH-USD.vbuy+KRAKEN:PI_ETHUSD.vbuy+OKEX:ETH-USDT-SWAP.vbuy+OKEX:ETH-USD-SWAP.vbuy)- (BINANCE_FUTURES:ethusdt.vsell+BINANCE_FUTURES:ethusd_perp.vsell+BITFINEX:ETHF0:USTF0.vsell+BITMEX:ETHUSD.vsell+BYBIT:ETHUSD.vsell+BYBIT:ETHUSDT.vsell+DERIBIT:ETH-PERPETUAL.vsell+FTX:ETH-PERP.vsell+HUOBI:ETH-USD.vsell+KRAKEN:PI_ETHUSD.vsell+OKEX:ETH-USDT-SWAP.vsell+OKEX:ETH-USD-SWAP.vsell)), title=PERP CVD)",
+          "id": "cvd-eth-perp copy 1",
+          "name": "CVD ETH Perp",
+          "options": {
+            "priceScaleId": "cvd-ETH-perp",
+            "color": "rgb(244,143,177)",
+            "lineStyle": 0,
+            "lineWidth": 1,
+            "scaleMargins": {
+              "top": 0.06,
+              "bottom": 0.56
+            },
+            "priceFormat": {
+              "type": "volume",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "lastValueVisible": true
+          },
+          "description": null,
+          "unsavedChanges": false,
+          "series": [
+            "cvd-eth-perp copy 1"
+          ],
+          "displayName": "CVD ETH Perp",
+          "createdAt": 1659400672301,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors"
+            ],
+            "tab": 0,
+            "optionsQuery": "",
+            "fontSize": 1
+          }
+        },
+        "cvd-eth-spot copy 2": {
+          "script": "line(cum((BINANCE:ethusdt.vbuy+BINANCE:ethusdc.vbuy+BITFINEX:ETHUSD.vbuy+BITSTAMP:ETHusd.vbuy+BITSTAMP:ETHusdt.vbuy+BITSTAMP:ETHusdc.vbuy+FTX:ETH/USD.vbuy+FTX:ETH/USDT.vbuy+HUOBI:ETHusdt.vbuy+HUOBI:ETHusdc.vbuy+KRAKEN:ETH/USDC.vbuy+KRAKEN:ETH/USDT.vbuy+KRAKEN:ETH/USD.vbuy+OKEX:ETH-USDT.vbuy+OKEX:ETH-USDC.vbuy+POLONIEX:USDT_ETH.vbuy+POLONIEX:USDC_ETH.vbuy)-(BINANCE:ethusdt.vsell+BINANCE:ethusdc.vsell+BITFINEX:ETHUSD.vsell+BITSTAMP:ETHusd.vsell+BITSTAMP:ETHusdt.vsell+BITSTAMP:ETHusdc.vsell+FTX:ETH/USD.vsell+FTX:ETH/USDT.vsell+HUOBI:ETHusdt.vsell+HUOBI:ETHusdc.vsell+KRAKEN:ETH/USDC.vsell+KRAKEN:ETH/USDT.vsell+KRAKEN:ETH/USD.vsell+OKEX:ETH-USDT.vsell+OKEX:ETH-USDC.vsell+POLONIEX:USDT_ETH.vsell+POLONIEX:USDC_ETH.vsell)), title=SPOT wo cb)",
+          "id": "cvd-eth-spot copy 2",
+          "name": "CVD ETH Spot",
+          "options": {
+            "priceScaleId": "cvd-ETH-spot",
+            "color": "rgb(0,255,255)",
+            "lineStyle": 0,
+            "lineWidth": 1,
+            "visible": true,
+            "scaleMargins": {
+              "top": 0.06,
+              "bottom": 0.56
+            },
+            "priceFormat": {
+              "type": "volume",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "lastValueVisible": true
+          },
+          "description": null,
+          "unsavedChanges": false,
+          "series": [
+            "cvd-eth-spot copy 2"
+          ],
+          "displayName": "CVD ETH Spot",
+          "createdAt": 1659400681661,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors"
+            ],
+            "tab": 0,
+            "optionsQuery": "",
+            "fontSize": 1
+          }
+        }
+      },
+      "priceScales": {
+        "right": {
+          "scaleMargins": {
+            "top": 0.19,
+            "bottom": 0.06
+          },
+          "indicators": [
+            "Price"
+          ]
+        },
+        "cvd": {
+          "scaleMargins": {
+            "top": 0.84,
+            "bottom": 0
+          }
+        },
+        "volume": {
+          "scaleMargins": {
+            "top": 0.87,
+            "bottom": 0
+          },
+          "indicators": [
+            "Volume"
+          ]
+        },
+        "cvd-ETH-binance": {
+          "scaleMargins": {
+            "top": 0.32,
+            "bottom": 0.41
+          }
+        },
+        "delta-perps": {
+          "scaleMargins": {
+            "top": 0.47,
+            "bottom": 0.4
+          },
+          "indicators": [
+            "Delta Perps"
+          ]
+        },
+        "aggr-delta-perps": {
+          "scaleMargins": {
+            "top": 0.43,
+            "bottom": 0.46
+          },
+          "indicators": [
+            "Aggr Delta perps"
+          ]
+        },
+        "liquidations": {
+          "scaleMargins": {
+            "top": 0.05,
+            "bottom": 0.83
+          },
+          "indicators": [
+            "Liquidations"
+          ]
+        },
+        "agg-spot-cvd": {
+          "scaleMargins": {
+            "top": 0.43,
+            "bottom": 0.43
+          },
+          "indicators": [
+            "Agg Spot Cvd"
+          ]
+        },
+        "agg-stablecoin-perps-delta": {
+          "scaleMargins": {
+            "top": 0.55,
+            "bottom": 0.34
+          },
+          "indicators": [
+            "Agg Stablecoin Perps Delta"
+          ]
+        },
+        "aggr-spot-delta": {
+          "scaleMargins": {
+            "top": 0.43,
+            "bottom": 0.43
+          },
+          "indicators": [
+            "Aggr Spot Delta"
+          ]
+        },
+        "agg-stablecoin-perps-cvd": {
+          "scaleMargins": {
+            "top": 0.58,
+            "bottom": 0.28
+          },
+          "indicators": [
+            "Agg StableCoin Perps CVD"
+          ]
+        },
+        "agg-coinmargin-perps-delta": {
+          "scaleMargins": {
+            "top": 0.7,
+            "bottom": 0.11
+          },
+          "indicators": [
+            "Agg CoinMargin Perps Delta"
+          ]
+        },
+        "agg-perp-cvd": {
+          "scaleMargins": {
+            "top": 0.1,
+            "bottom": 0.2
+          }
+        },
+        "agg-coinmargin-perps-cvd": {
+          "scaleMargins": {
+            "top": 0.73,
+            "bottom": 0.13
+          },
+          "indicators": [
+            "Agg CoinMargin Perps CVD"
+          ]
+        },
+        "agg-spot-delta": {
+          "scaleMargins": {
+            "top": 0.1,
+            "bottom": 0.2
+          }
+        },
+        "delta-spot": {
+          "scaleMargins": {
+            "top": 0.44,
+            "bottom": 0.42
+          },
+          "indicators": [
+            "Aggr Spot Delta"
+          ]
+        },
+        "delta-stable-perp-aggr": {
+          "scaleMargins": {
+            "top": 0.58,
+            "bottom": 0.28
+          },
+          "indicators": [
+            "Aggr Stablecoin PERPETUAL Delta"
+          ]
+        },
+        "coin-margin-delta-perps": {
+          "scaleMargins": {
+            "top": 0.73,
+            "bottom": 0.13
+          },
+          "indicators": [
+            "Aggregated CoinMargin PERPETUAL Delta"
+          ]
+        },
+        "cvd-btc-spot": {
+          "scaleMargins": {
+            "top": 0.29,
+            "bottom": 0.37
+          }
+        },
+        "cvd-ETH-perp": {
+          "scaleMargins": {
+            "top": 0.19,
+            "bottom": 0.06
+          },
+          "indicators": [
+            "CVD ETH Perp"
+          ]
+        },
+        "cvd-ETH-spot": {
+          "scaleMargins": {
+            "top": 0.19,
+            "bottom": 0.06
+          },
+          "indicators": [
+            "CVD ETH Spot"
+          ]
+        }
+      },
+      "layouting": false,
+      "timeframe": "60",
+      "refreshRate": 1000,
+      "showLegend": true,
+      "fillGapsWithEmpty": true,
+      "forceNormalizePrice": false,
+      "showHorizontalGridlines": false,
+      "horizontalGridlinesColor": "rgba(255,255,255,.1)",
+      "showVerticalGridlines": false,
+      "verticalGridlinesColor": "rgba(255,255,255,.1)",
+      "showWatermark": true,
+      "watermarkColor": "rgba(255,255,255,.1)",
+      "hiddenMarkets": {},
+      "barSpacing": 7.157641739258491,
+      "_id": "aggr"
     }
   }
 }
