@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "createdAt": 1657707655471,
-  "updatedAt": 1657707716674,
+  "createdAt": 1657716671123,
+  "updatedAt": 1662315159831,
   "name": "delta dash div aggr [shika]",
   "id": "1rlv",
   "states": {
@@ -757,9 +757,11 @@
       "theme": "dark",
       "backgroundColor": "rgb(23,27,41)",
       "textColor": "",
-      "timezoneOffset": 0,
+      "buyColor": "rgb(100, 157, 102)",
+      "sellColor": "rgb(239, 67, 82)",
+      "timezoneOffset": -14400000,
       "useAudio": false,
-      "audioVolume": 1,
+      "audioVolume": 0.42,
       "audioFilters": {
         "PingPongDelay": true,
         "Compressor": false,
@@ -775,9 +777,13 @@
         "audio",
         "workspaces"
       ],
+      "searchSections": [
+        "exchanges",
+        "types"
+      ],
       "searchTypes": {
         "historical": true,
-        "spots": true,
+        "spots": false,
         "perpetuals": false,
         "futures": false,
         "normalize": false,
@@ -851,6 +857,122 @@
         "PHEMEX": true,
         "POLONIEX": true
       },
+      "timeframes": [
+        {
+          "label": "1s",
+          "value": "1"
+        },
+        {
+          "label": "3s",
+          "value": "3"
+        },
+        {
+          "label": "5s",
+          "value": "5"
+        },
+        {
+          "label": "10s",
+          "value": "10"
+        },
+        {
+          "label": "15s",
+          "value": "15"
+        },
+        {
+          "label": "30s",
+          "value": "30"
+        },
+        {
+          "label": "1m",
+          "value": "60"
+        },
+        {
+          "label": "3m",
+          "value": "180"
+        },
+        {
+          "label": "5m",
+          "value": "300"
+        },
+        {
+          "label": "15m",
+          "value": "900"
+        },
+        {
+          "label": "21m",
+          "value": "1260"
+        },
+        {
+          "label": "30m",
+          "value": "1800"
+        },
+        {
+          "label": "1h",
+          "value": "3600"
+        },
+        {
+          "label": "2h",
+          "value": "7200"
+        },
+        {
+          "label": "4h",
+          "value": "14400"
+        },
+        {
+          "label": "6h",
+          "value": "21600"
+        },
+        {
+          "label": "8h",
+          "value": "28800"
+        },
+        {
+          "label": "12h",
+          "value": "43200"
+        },
+        {
+          "label": "1d",
+          "value": "86400"
+        },
+        {
+          "label": "21 ticks",
+          "value": "21t"
+        },
+        {
+          "label": "50 ticks",
+          "value": "50t"
+        },
+        {
+          "label": "89 ticks",
+          "value": "89t"
+        },
+        {
+          "label": "100 ticks",
+          "value": "100t"
+        },
+        {
+          "label": "200 ticks",
+          "value": "200t"
+        },
+        {
+          "label": "610 ticks",
+          "value": "610t"
+        },
+        {
+          "label": "1000 ticks",
+          "value": "1000t"
+        },
+        {
+          "label": "1597 ticks",
+          "value": "1597t"
+        }
+      ],
+      "timeframeGroups": [
+        "seconds",
+        "minutes",
+        "hours",
+        "ticks"
+      ],
       "favoriteTimeframes": {
         "60": "1m",
         "300": "5m",
@@ -1152,7 +1274,7 @@
               "format",
               "defaultOptions"
             ],
-            "tab": "#options",
+            "tab": "#script",
             "optionsQuery": "",
             "fontSize": 1
           },
@@ -1349,7 +1471,7 @@
           "unsavedChanges": false,
           "series": [
             "liquidations",
-            "gt56bsl6"
+            "fc4ntbbt"
           ],
           "displayName": "Liquidations",
           "createdAt": 1657349169744,
@@ -1574,10 +1696,16 @@
             "top": 0.75,
             "bottom": 0.12
           }
+        },
+        "perps-premium": {
+          "scaleMargins": {
+            "top": 0.88,
+            "bottom": 0.02
+          }
         }
       },
       "layouting": false,
-      "timeframe": "300",
+      "timeframe": "60",
       "refreshRate": 1000,
       "showLegend": false,
       "fillGapsWithEmpty": false,
@@ -1589,7 +1717,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 5.369050803835597,
+      "barSpacing": 1.2207097054907852,
       "_id": "chart3"
     },
     "btc-perp-delta": {
@@ -2050,6 +2178,39 @@
           },
           "updatedAt": 1657369126941,
           "uses": 1
+        },
+        "agg-spot-cvd": {
+          "script": "line(cum((BINANCE:btcusdt.vbuy+BINANCE:btcusdc.vbuy+BITFINEX:BTCUSD.vbuy+BITSTAMP:btcusd.vbuy+BITSTAMP:btcusdt.vbuy+BITSTAMP:btcusdc.vbuy+COINBASE:BTC-USDC.vbuy+COINBASE:BTC-USD.vbuy+COINBASE:BTC-USDT.vbuy+FTX:BTC/USD.vbuy+FTX:BTC/USDT.vbuy+HUOBI:btcusdt.vbuy+HUOBI:btcusdc.vbuy+KRAKEN:XBT/USDC.vbuy+KRAKEN:XBT/USDT.vbuy+KRAKEN:XBT/USD.vbuy+OKEX:BTC-USDT.vbuy+OKEX:BTC-USDC.vbuy+POLONIEX:USDT_BTC.vbuy+POLONIEX:USDC_BTC.vbuy)-(BINANCE:btcusdt.vsell+BINANCE:btcusdc.vsell+BITFINEX:BTCUSD.vsell+BITSTAMP:btcusd.vsell+BITSTAMP:btcusdt.vsell+BITSTAMP:btcusdc.vsell+COINBASE:BTC-USDC.vsell+COINBASE:BTC-USD.vsell+COINBASE:BTC-USDT.vsell+FTX:BTC/USD.vsell+FTX:BTC/USDT.vsell+HUOBI:btcusdt.vsell+HUOBI:btcusdc.vsell+KRAKEN:XBT/USDC.vsell+KRAKEN:XBT/USDT.vsell+KRAKEN:XBT/USD.vsell+OKEX:BTC-USDT.vsell+OKEX:BTC-USDC.vsell+POLONIEX:USDT_BTC.vsell+POLONIEX:USDC_BTC.vsell)), title=Spot CVD)",
+          "id": "agg-spot-cvd",
+          "name": "Agg Spot Cvd",
+          "priceScaleId": "right",
+          "options": {
+            "priceScaleId": "agg-spot-cvd",
+            "priceFormat": {
+              "type": "volume",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "lastValueVisible": true,
+            "color": "rgb(76,175,80)"
+          },
+          "series": [
+            "agg-spot-cvd"
+          ],
+          "displayName": "Agg Spot Cvd",
+          "unsavedChanges": false,
+          "createdAt": 1657696635979,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors"
+            ],
+            "tab": 0,
+            "optionsQuery": "",
+            "fontSize": 1
+          },
+          "updatedAt": 1659283036677
         }
       },
       "priceScales": {
@@ -2214,10 +2375,19 @@
           "indicators": [
             "FTX Spot CVD"
           ]
+        },
+        "agg-spot-cvd": {
+          "scaleMargins": {
+            "top": 0.06,
+            "bottom": 0.56
+          },
+          "indicators": [
+            "Agg Spot Cvd"
+          ]
         }
       },
       "layouting": false,
-      "timeframe": "300",
+      "timeframe": "60",
       "refreshRate": 1000,
       "showLegend": true,
       "fillGapsWithEmpty": true,
@@ -2229,7 +2399,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 10.668340432720697,
+      "barSpacing": 3.966832271816964,
       "_id": "btc-perp-delta"
     },
     "trades": {
@@ -2701,7 +2871,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 1.2862670660406719,
+      "barSpacing": 0.1520195024240885,
       "_id": "chart"
     },
     "chart2": {
@@ -2736,7 +2906,7 @@
           "series": [
             "price"
           ],
-          "unsavedChanges": false,
+          "unsavedChanges": true,
           "displayName": "Price",
           "navigationState": {
             "sections": [
@@ -2773,7 +2943,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "nlqa2skf"
+            "deh46eib"
           ],
           "navigationState": {
             "sections": [
@@ -2809,7 +2979,7 @@
           "unsavedChanges": false,
           "series": [
             "liquidations",
-            "03k3h87z"
+            "vtla2rqq"
           ],
           "displayName": "Liquidations",
           "createdAt": 1657349169744,
@@ -3064,12 +3234,127 @@
             "fontSize": 1
           },
           "updatedAt": 1657706998186
+        },
+        "cvd-btc-perp": {
+          "script": "line(cum((BINANCE_FUTURES:btcusdt.vbuy+BINANCE_FUTURES:btcusd_perp.vbuy+BITFINEX:BTCF0:USTF0.vbuy+BITMEX:XBTUSD.vbuy+BYBIT:BTCUSD.vbuy+BYBIT:BTCUSDT.vbuy+DERIBIT:BTC-PERPETUAL.vbuy+FTX:BTC-PERP.vbuy+HUOBI:BTC-USD.vbuy+KRAKEN:PI_XBTUSD.vbuy+OKEX:BTC-USDT-SWAP.vbuy+OKEX:BTC-USD-SWAP.vbuy)- (BINANCE_FUTURES:btcusdt.vsell+BINANCE_FUTURES:btcusd_perp.vsell+BITFINEX:BTCF0:USTF0.vsell+BITMEX:XBTUSD.vsell+BYBIT:BTCUSD.vsell+BYBIT:BTCUSDT.vsell+DERIBIT:BTC-PERPETUAL.vsell+FTX:BTC-PERP.vsell+HUOBI:BTC-USD.vsell+KRAKEN:PI_XBTUSD.vsell+OKEX:BTC-USDT-SWAP.vsell+OKEX:BTC-USD-SWAP.vsell)), title=PERP CVD)",
+          "id": "cvd-btc-perp",
+          "name": "CVD BTC Perp",
+          "options": {
+            "priceScaleId": "cvd-btc-perp",
+            "color": "rgb(244,143,177)",
+            "lineStyle": 0,
+            "lineWidth": 1,
+            "scaleMargins": {
+              "top": 0.32,
+              "bottom": 0.41
+            },
+            "priceFormat": {
+              "type": "volume",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "lastValueVisible": true,
+            "visible": true
+          },
+          "description": null,
+          "unsavedChanges": false,
+          "series": [
+            "cvd-btc-perp"
+          ],
+          "displayName": "CVD BTC Perp",
+          "createdAt": 1657344659485,
+          "updatedAt": 1657355052191,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors"
+            ],
+            "tab": "#script",
+            "optionsQuery": "",
+            "fontSize": 1
+          },
+          "uses": 2
+        },
+        "cvd-btc-spot": {
+          "script": "line(cum((BINANCE:btcusdt.vbuy+BINANCE:btcusdc.vbuy+BITFINEX:BTCUSD.vbuy+BITSTAMP:btcusd.vbuy+BITSTAMP:btcusdt.vbuy+BITSTAMP:btcusdc.vbuy+FTX:BTC/USD.vbuy+FTX:BTC/USDT.vbuy+HUOBI:btcusdt.vbuy+HUOBI:btcusdc.vbuy+KRAKEN:XBT/USDC.vbuy+KRAKEN:XBT/USDT.vbuy+KRAKEN:XBT/USD.vbuy+OKEX:BTC-USDT.vbuy+OKEX:BTC-USDC.vbuy+POLONIEX:USDT_BTC.vbuy+POLONIEX:USDC_BTC.vbuy)-(BINANCE:btcusdt.vsell+BINANCE:btcusdc.vsell+BITFINEX:BTCUSD.vsell+BITSTAMP:btcusd.vsell+BITSTAMP:btcusdt.vsell+BITSTAMP:btcusdc.vsell+FTX:BTC/USD.vsell+FTX:BTC/USDT.vsell+HUOBI:btcusdt.vsell+HUOBI:btcusdc.vsell+KRAKEN:XBT/USDC.vsell+KRAKEN:XBT/USDT.vsell+KRAKEN:XBT/USD.vsell+OKEX:BTC-USDT.vsell+OKEX:BTC-USDC.vsell+POLONIEX:USDT_BTC.vsell+POLONIEX:USDC_BTC.vsell)), title=SPOT wo cb)",
+          "id": "cvd-btc-spot",
+          "name": "CVD BTC Spot",
+          "options": {
+            "priceScaleId": "cvd-btc-spot",
+            "color": "rgb(0,255,255)",
+            "lineStyle": 0,
+            "lineWidth": 1,
+            "visible": true,
+            "scaleMargins": {
+              "top": 0.29,
+              "bottom": 0.37
+            },
+            "priceFormat": {
+              "type": "volume",
+              "precision": 2,
+              "minMove": 0.01,
+              "auto": false
+            },
+            "lastValueVisible": true
+          },
+          "description": null,
+          "unsavedChanges": false,
+          "series": [
+            "cvd-btc-spot"
+          ],
+          "displayName": "CVD BTC Spot",
+          "createdAt": 1657347275560,
+          "updatedAt": 1657846864922,
+          "navigationState": {
+            "sections": [
+              "position",
+              "colors",
+              "format",
+              "defaultOptions"
+            ],
+            "tab": "#script",
+            "optionsQuery": "",
+            "fontSize": 1
+          },
+          "uses": 1
+        },
+        "perps-premium": {
+          "script": "perpAvg = (BYBIT:BTCUSD.close + FTX:BTC-PERP.close + BITMEX:XBTUSD.close + BINANCE_FUTURES:btcusd_perp.close) / 4\n\nspotAvg = (COINBASE:BTC-USD.close + BINANCE:btcusdt.close + BITFINEX:BTCUSD.close)/3\n\npremium = perpAvg - spotAvg\nbaseline = 0\n\nplotcloudarea(premium, baseline, title=PerpPrem)",
+          "id": "perps-premium",
+          "name": "Perps Premium",
+          "options": {
+            "priceScaleId": "perps-premium",
+            "visible": true,
+            "priceLineVisible": false,
+            "lastValueVisible": true,
+            "lowerLineColor": "rgba(119,255,0,0)",
+            "positiveColor": "rgba(33,150,243,0.48)",
+            "negativeColor": "rgba(233,30,99,0.5)",
+            "higherLineColor": "rgba(255,255,255,0)",
+            "priceFormat": {
+              "type": "price",
+              "minMove": "0.01",
+              "precision": 1
+            },
+            "scaleMargins": {
+              "top": 0.88,
+              "bottom": 0.02
+            }
+          },
+          "description": null,
+          "unsavedChanges": false,
+          "series": [
+            "perps-premium"
+          ],
+          "displayName": "Perps Premium",
+          "createdAt": 1659212001294
         }
       },
       "priceScales": {
         "right": {
           "scaleMargins": {
-            "top": 0.17,
+            "top": 0.15,
             "bottom": 0.58
           },
           "indicators": [
@@ -3117,8 +3402,8 @@
         },
         "liquidations": {
           "scaleMargins": {
-            "top": 0.05,
-            "bottom": 0.83
+            "top": 0.03,
+            "bottom": 0.85
           },
           "indicators": [
             "Liquidations"
@@ -3216,6 +3501,30 @@
           "indicators": [
             "Aggregated CoinMargin PERPETUAL Delta"
           ]
+        },
+        "cvd-btc-perp": {
+          "scaleMargins": {
+            "top": 0.15,
+            "bottom": 0.58
+          },
+          "indicators": [
+            "CVD BTC Perp"
+          ]
+        },
+        "cvd-btc-spot": {
+          "scaleMargins": {
+            "top": 0.15,
+            "bottom": 0.58
+          },
+          "indicators": [
+            "CVD BTC Spot"
+          ]
+        },
+        "perps-premium": {
+          "scaleMargins": {
+            "top": 0.88,
+            "bottom": 0.02
+          }
         }
       },
       "layouting": false,
@@ -3231,7 +3540,7 @@
       "showWatermark": true,
       "watermarkColor": "rgba(255,255,255,.1)",
       "hiddenMarkets": {},
-      "barSpacing": 3.5958146075465587,
+      "barSpacing": 1.914104988236235,
       "_id": "chart2"
     }
   }
